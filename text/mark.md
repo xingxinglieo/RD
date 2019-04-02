@@ -1,5 +1,23 @@
 #### 总体
 
+开发技巧设置
+
+ *设置border{0.001rem solid}可以观察每个模块的大小边
+
+**包围标签：双击div标签开头选中标签内容2、按Ctrl+]包围3、输入div即可在首尾添加包围标签**
+
+反包围：双击标签开头选中标签内容2、按Ctrl+shift+]反包围3、可去掉最外层的p标签并自动处理子节点的缩进
+
+撤销多选光标的最后一个光标：双击选中class2、按下Ctrl+e选中相同词3、按Ctrl+shift+z不再选中最后一个词
+
+ctr+/ 注释或反注释
+
+**转到定义：Alt+d**
+
+**折叠其他选区：Alt+Shift+o。**
+
+**左边的大纲是长文档导航的利器。alt+w激活它(mac是ctrl+w)**
+
 ```
 a{text-decoration: none;color: black;}
 *{margin: 0;padding: 0;}/*清除所有元素自带的margin和padding属性以便调整*/

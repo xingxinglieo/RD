@@ -1,225 +1,33 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<style type="text/css">
-			 a{text-decoration: none;color: black;}
-			 h2{padding-top: 4.375rem;}
-			*{margin: 0;padding: 0;}/*清除所有元素自带的margin和padding属性以便调整*/
-			.content{width:55.625rem;margin: 0 auto;}/*margin:0 auto 用于居中一整个块元素*/
-			.underline{width:5.625rem;height: 0.125rem;margin-top: 1.25rem;margin:0rem auto ;background-color: #8B0000;}/**/
-			.linetext{display: inline-block;width:20.25rem;text-align:center;position:relative;bottom:0.625rem;color: gray;}
-			.left{height: 0.15625rem;width:17.1875rem;float: left;background-color: gray;}
-			
-			.right{height:0.15625rem;width:17.1875rem;float: right;background: gray;}
-			
-			.line{padding-top: 2.5rem;}
-			.rightround{float:right;width: 0.375rem;height: 0.375rem;border-radius:0.1875rem;background: gray;}
-			.leftround{float: left ;width: 0.375rem;height: 0.375rem;border-radius:0.1875rem;background: gray;}
-			/* WebKit browsers */
-			::-webkit-input-placeholder {color: #cccccc;}
-/* Mozilla Firefox 4 to 18 */
-			:-moz-placeholder {color:#cccccc;opacity: 1;}
-			/* Mozilla Firefox 19+ */
-			::-moz-placeholder {color:#cccccc;opacity: 1;}
-			/* Internet Explorer 10+ */
-			:-ms-input-placeholder {color:;}
-			/*top*/
-			#topcontent *{vertical-align:-0.3125rem;}
-			#topcontent 
-			#top *{color:white}/*将小图标调整对齐*/
-			#mail{margin-right: 0.3125rem;margin-left: 26.5625rem;margin-bottom: 0.08rem;}
-			#phone{margin-right:0.3125rem;margin-left:0.3125rem;margin-bottom: -0.05rem;margin-left: 0.625rem;padding-left: 0.9375rem;border-left: 0.125rem dashed white;}
-			/*top*/
-			
-			
-			/*one*/
-			#one{height:40rem;background-image:url(img/back.png);background-repeat: no-repeat;background-size:cover ;}/*必须设置块高否则背景图片无法显示完整*/
-			#content_one{margin-top:0.9375rem;}/*向下调整对齐*/
-			#content_one li{display: table-cell;text-align: center;vertical-align: middle;}/*display li ul父子元素配合 转化为表格模式使其可以横向显示并均匀分配空间*/
-			#content_one ul{width: 34.375rem;float: right;height: 4.1875rem; display:table;list-style: none;font-size: smaller;font-weight: 800;}
-			#content_one li:hover{border-bottom:0.2rem solid darkred;color:darkred;position:relative;top: 0.1rem;}
-			#btm:hover{cursor: pointer;height: 99%;}/*one*/
-			
-			
-			/*two*/
-			.title{text-align: center;}
-			.text{display: inline-block;width:16.875rem ; height: 8.75rem;margin:0.625rem;position: relative;background-color: aliceblue;}
-			.text img{position:absolute;top:37%;left: 5%;}
-			.content_two{height: 100%;width:12.5rem;float: right;}/*这个百分比不用变它随着父元素大小变化而变化*/
-			.p1{font-size: 1.25rem;padding-top: 1.25rem;}
-			.p2{font-size: 0.8125rem;color: gray;}
-			.p2:hover{background: #8B0000;color:white;}
-			.p3{height: 0.125rem;width:35%;margin-top: 0.3125rem;margin-bottom: 0.3125rem; background:#808080;}
-			.p4{font-size: 0.8125rem;color: gray;}
-			.text:hover{background: #8B0000;color:white;}
-			/*three*/
-			#content_three{height:37.5rem;}
-			.content_three{display: inline-block;position: relative;
-			width:19%;height: ;margin-top:3.125rem ;}
-			.round{width:8.875rem ;height:8.875rem ;position: absolute; 
-			border-radius:4.6875rem ;margin-left:0.9375rem;border:0.4rem solid darkred;font-weight: 700;color: darkred;}/*必须使用相对定位和绝对定位否则会下沉*/
-			.round_one{text-align: center;margin: 3.125rem 2rem;width: 5rem;height:5rem;font-size: 1.25rem;}
-			.round_two{width: 9.375rem;font-size:0.9375rem;text-align: center;color: black;}
-			.round_three{font-size:0.75rem;margin:0.625rem 1.25rem;width:6.875rem ;text-align: center;color: #808080;}
-			.round:hover{background: #8B0000;color: white;}
-			/*three*/
-			/*four*/#four img{padding-bottom: 3.125rem;}
-			/*five*/.bottom{display: inline-block;} 
-			.ask{font-size: 0.85rem;width: 11.25rem;}
-			 #five li{position:relative;}
-			.span1{position: absolute;right: 7rem;font-size: small;}
-			.span2{position: absolute;right: -2.502rem;font-size: small;}
-			/*bottom*/#name,#maill,#phone2{height:1.875rem;float:left;}#bottom img{margin-right: 0.5rem;}#button:hover{cursor: pointer;}
-			/*fixed*/.fixed{margin-top:0.09375rem;width:3.125rem;height:3.4375rem;background:darkred;text-align: center;}
-			#fixed img{margin-top:0.8125rem}
- 		</style>
-	<script>
-		window.onload=function()
-		{
-			var content=document.querySelectorAll(".text");
-			var img=document.querySelectorAll(".text img")
-			var p1=document.querySelectorAll(".p1")
-			var p2=document.querySelectorAll(".p2")
-			var p3=document.querySelectorAll(".p3")
-			var p4=document.querySelectorAll(".p4")
-			content[0].onmouseover=function()
-			{
-				p1[0].style.color="white";
-				p2[0].style.color="white"
-			    p3[0].style.backgroundColor="white"
-				p4[0].style.color="white"
-				img[0].src="img/1.2.png"
-			}
-			content[0].onmouseleave=function()
-			{
-				p1[0].style.color="black";
-				p2[0].style.color="gray"
-			    p3[0].style.backgroundColor="#808080"
-				p4[0].style.color="gray"
-				img[0].src="img/1.1.png"
-			}
-			content[1].onmouseover=function()
-			{
-				p1[1].style.color="white";
-				p2[1].style.color="white"
-			    p3[1].style.backgroundColor="white"
-				p4[1].style.color="white"
-				img[1].src="img/2.2.png"
-			}
-			content[1].onmouseleave=function()
-			{
-				p1[1].style.color="black";
-				p2[1].style.color="gray"
-			    p3[1].style.backgroundColor="#808080"
-				p4[1].style.color="gray"
-				img[1].src="img/2.1.png"
-			}
-			content[2].onmouseover=function()
-			{
-				p1[2].style.color="white";
-				p2[2].style.color="white"
-			    p3[2].style.backgroundColor="white"
-				p4[2].style.color="white"
-				img[2].src="img/3.2.png"
-			}
-			content[2].onmouseleave=function()
-			{
-				p1[2].style.color="black";
-				p2[2].style.color="gray"
-			    p3[2].style.backgroundColor="#808080"
-				p4[2].style.color="gray"
-				img[2].src="img/3.1.png"
-			}
-			content[3].onmouseover=function()
-			{
-				p1[3].style.color="white";
-				p2[3].style.color="white"
-			    p3[3].style.backgroundColor="white"
-				p4[3].style.color="white"
-				img[3].src="img/4.2.png"
-			}
-			content[3].onmouseleave=function()
-			{
-				p1[3].style.color="black";
-				p2[3].style.color="gray"
-			    p3[3].style.backgroundColor="#808080"
-				p4[3].style.color="gray"
-				img[3].src="img/4.1.png"
-			}
-			content[4].onmouseover=function()
-			{
-				p1[4].style.color="white";
-				p2[4].style.color="white"
-			    p3[4].style.backgroundColor="white"
-				p4[4].style.color="white"
-				img[4].src="img/5.2.png"
-			}
-			content[4].onmouseleave=function()
-			{
-				p1[4].style.color="black";
-				p2[4].style.color="gray"
-			    p3[4].style.backgroundColor="#808080"
-				p4[4].style.color="gray"
-				img[4].src="img/5.1.png"
-			}
-			content[5].onmouseover=function()
-			{
-				p1[5].style.color="white";
-				p2[5].style.color="white"
-			    p3[5].style.backgroundColor="white"
-				p4[5].style.color="white"
-				img[5].src="img/6.2.png"
-			}
-			content[5].onmouseleave=function()
-			{
-				p1[5].style.color="black";
-				p2[5].style.color="gray"
-			    p3[5].style.backgroundColor="#808080"
-				p4[5].style.color="gray"
-				img[5].src="img/6.1.png"
-			}
-			var d=new Date();
-			var g=document.querySelectorAll(".span1")
-			var f=document.querySelectorAll(".span2")
-			var y=d.getYear();
-			var m=d.getMonth()+1;
-			var da=d.getDate();
-			var text=Array();
-			var text_one=Array();
-			for(i=0;i<g.length;i++)
-			{
-				text[i]=document.createTextNode(y+1900+"-"+m+"-"+da);
-				g[i].appendChild(text[i]);
-			}
-			for(k=0;k<f.length;k++)
-			{
-				text_one[k]=document.createTextNode(y+1900+"-"+m+"-"+da);
-				f[k].appendChild(text_one[k]);
-			}
-			
-		}
-	</script>
+
+		</style>
+		<script src="js/new_file.js"></script>
 	</head>
-	
+
 	<body>
-		    
-		<div id="top" style="height: 2.1875rem; background-color: darkred;">
-            <div class="content" id="topcontent">
-				<a href=""><img src="img/weibo.png" id="weibo"></a> 
-				<a href=""><img src="img/weixin.png" id="weichat"></a>
-				<span><img src="img/mail.png" id="mail"></span>
-				<span style="vertical-align: -0.1875rem;"><span style="color: white;">Cisonyeung2015@163.com</span></span>
-				<span><img src="img/phone.png" id="phone"></span>
-				<span style="vertical-align:-0.1875rem;width: 9.375rem;"><span style="color:white;">18826138712</span></span>
-			</div> 
-		</div>
-		<div id="one" class="back" style="border-bottom:0.1875rem solid #8B0000;">
-			<div style="height: 0.01rem;">	
+
+		<div id="top" >
+			<div class="content" id="topcontent">
+				<img src="img/weibo.png" id="top_weibo">
+				<img src="img/weixin.png" id="top_weichat">
+				<div id="top_icon">
+					<img src="img/mail.png" id="top_mail">
+					<span id="top_span_two">Gisonyeung2015@163.com</span>
+					<img src="img/phone.png" id="top_phone">
+					<span id="top_span_three"><span>18826138712</span></span>
+				</div>
 			</div>
-			<div id="content_one" class="content">
+		</div>
+		<div id="one">
+			<div style="height: 0.01rem;">
+			</div>
+			<div id="one_container" class="content">
 				<img src="img/logo.png" />
 				<ul>
 					<li>
@@ -250,162 +58,173 @@
 						<a href="">正乾论坛</a>
 					</li>
 				</ul>
-				<img src="img/expert.png" style="margin-top:6.25rem ;">
-				<br/>
+				<!-- <img src="img/expert.png" style="margin-top:6.25rem ;"> -->
+				<div id="one_logo">
+					<span id="one_money">正乾，您身边的金融</span>
+					<span id="one_shadow">专家</span>
+					<span id="one_expert">专家</span>
+				</div>
+				<br />
 				<div style="line-height: 1.875rem;color:lightslategray">
 					<span>方便 / 快捷 / 可靠</span>
-					<br/>
+					<br />
 					<span>致力于用户体验更加简单方便，</span>
-					<br/>
+					<br />
 					<span>帮助用户解决急切需求</span>
 				</div>
-				<input type="button" value="申请帮助" id="btm" style="margin-top: 4.375rem;width: 10rem;height: 3.75rem ;
+				<input type="button" value="申请帮助" id="one_btm" style="margin-top: 4.375rem;width: 10rem;height: 3.75rem ;
 				border: none;background: #8B0000;box-shadow:0.09rem 0.09rem 0.1875rem gray;font-size:larger;color: white;border-radius: 0.625rem 0.625rem">
 			</div>
 		</div>
-		<div id="two" class="back" style="height: 34.375rem;background-color: floralwhite;">
-			<div id="content_two" class="content">
+		<div id="two" >
+			<div id="two_container" class="content">
 				<h2 class="title">
 					正乾金融 六大优势
 				</h2>
 				<div class="line">
 					<div class="left">
+						<div class="rightround"></div>
 					</div>
 					<div class="linetext">
 						OUR ADVANTAGES
 					</div>
 					<div class="right">
+						<div class="leftround"></div>
 					</div>
 				</div>
-	        <div class="underline" style="margin-bottom: 2.5rem;">
-				
+				<div class="underline" style="">
+
+				</div>
+				<div class="text">
+					<img src="img/1.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							本土优势
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，快捷方便轻松省心！
+						</p>
+					</div>
+
+				</div>
+				<div class="text">
+					<img src="img/2.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							贷款更快捷
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，1-3个工作日汇款到你的银行账户
+						</p>
+					</div>
+				</div>
+				<div class="text">
+					<img src="img/3.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							财务稳健令客户放心
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，快捷方便轻松省心！
+						</p>
+					</div>
+				</div>
+				<div class="text">
+					<img src="img/4.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							培训优势
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，快捷方便轻松省心!
+						</p>
+					</div>
+				</div>
+				<div class="text">
+					<img src="img/5.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							管理优势
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，1-3个工作日汇款到你的银行账户
+						</p>
+					</div>
+				</div>
+				<div class="text">
+					<img src="img/6.1.png" />
+					<div class="two_content">
+						<p class="p1">
+							完善的应急机制
+						</p>
+						<p class="p2">
+							LOANS MORE EASILY
+						</p>
+						<div class="p3">
+
+						</div>
+						<p class="p4">
+							无需到访门店，在线三步轻松申请，快捷方便轻松省心！
+						</p>
+					</div>
+				</div>
 			</div>
-					<div class="text">
-						<img src="img/1.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								本土优势
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，快捷方便轻松省心！
-							</p>
-						</div>
-					
-					</div>
-					<div class="text">
-						<img src="img/2.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								贷款更快捷
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，1-3个工作日汇款到你的银行账户
-							</p>
-						</div>
-					</div>
-					<div class="text">
-						<img src="img/3.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								财务稳健令客户放心
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，快捷方便轻松省心！
-							</p>
-						</div>
-					</div>
-					<div class="text">
-						<img src="img/4.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								培训优势
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，快捷方便轻松省心!
-							</p>
-						</div>
-					</div>
-					<div class="text">
-						<img src="img/5.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								管理优势
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，1-3个工作日汇款到你的银行账户
-							</p>
-						</div>
-					</div>
-					<div class="text">
-						<img src="img/6.1.png"/>
-						<div class="content_two">
-							<p class="p1">
-								完善的应急机制
-							</p>
-							<p class="p2">
-								LOANS MORE EASILY
-							</p>
-							<div class="p3">
-								
-							</div>
-							<p class="p4">
-								无需到访门店，在线三步轻松申请，快捷方便轻松省心！
-							</p>
-						</div>
-				</div> 
-			</div>
-		
+
 		</div>
 		<div id="three" class="back">
-			<div id="content_three" class="content" style="clear: both">
+			<div id="three_container" class="content">
 				<h2 class="title">
 					正乾金融 服务项目
 				</h2>
 				<div class="line">
+
 					<div class="left">
+						<div class="rightround"></div>
 					</div>
 					<div class="linetext">
 						LOAN PROGRAM
 					</div>
+
 					<div class="right">
+						<div class="leftround"></div>
 					</div>
 				</div>
 				<div class="underline">
-					
+
 				</div>
-			    <div class="content_three">
+				<div class="three_content">
 					<div class="round">
-						<div class="round_one" >
+						<div class="round_one">
 							人力资源服务
 						</div>
 						<div class="round_two">
@@ -415,11 +234,11 @@
 							中国人力资源创始者中国五百强企业
 						</div>
 					</div>
-				
+
 				</div>
-			    <div class="content_three">
+				<div class="three_content">
 					<div class="round">
-						<div class="round_one" >
+						<div class="round_one">
 							呼叫外包中心
 						</div>
 						<div class="round_two">
@@ -429,12 +248,12 @@
 							结合丰富的呼叫外包运营经验
 						</div>
 					</div>
-					
-				
-			</div>
-			    <div class="content_three">
+
+
+				</div>
+				<div class="three_content">
 					<div class="round">
-						<div class="round_one" >
+						<div class="round_one">
 							凭证管理服务
 						</div>
 						<div class="round_two">
@@ -442,14 +261,14 @@
 						</div>
 						<div class="round_three">
 							提供安全丰富的凭证管理功能
-						</div>	
+						</div>
 					</div>
-					
-				
-			</div>
-			    <div class="content_three">
+
+
+				</div>
+				<div class="three_content">
 					<div class="round">
-						<div class="round_one" >
+						<div class="round_one">
 							贷款管理服务
 						</div>
 						<div class="round_two">
@@ -457,14 +276,14 @@
 						</div>
 						<div class="round_three">
 							持久专业的业务规范以及管理流程
-						</div>		
+						</div>
 					</div>
-					
-				
-			</div>
-			    <div class="content_three">
+
+
+				</div>
+				<div class="three_content">
 					<div class="round">
-						<div class="round_one" >
+						<div class="round_one">
 							金融票据传送
 						</div>
 						<div class="round_two">
@@ -472,202 +291,205 @@
 						</div>
 						<div class="round_three">
 							快捷安全的金融票据电子化交易系统
-						</div>	
+						</div>
 					</div>
-				
-			</div>
+
+				</div>
 			</div>
 		</div>
 		<div id="four" class="back" style="background-color:whitesmoke;">
-			<div id="content_four" class="content">
+			<div class="content">
 				<h2 class="title">
 					关于正乾金融
 				</h2>
 				<div class="line">
-				<div class="left">
+					<div class="left">
+						<div class="rightround"></div>
+					</div>
+					<div class="linetext">
+						ABOUT US
+					</div>
+					<div class="right">
+						<div class="leftround"></div>
+					</div>
+					<div class="underline">
+
+					</div>
 				</div>
-				<div class="linetext">
-					ABOUT US
-				</div>
-			    <div class="right">
-				</div>
-				<div class="underline">
-				
-				</div>
-				</div>
-				<h2 style="color: #8B0000;text-align: center;font-size: 900;">
+				<h2 id="four_title">
 					可靠的本地金融让您后顾无忧
 				</h2>
-				<p style="padding-top: 3.125rem;text-indent: 2em;">
-					河南正乾金融有限公司总部位于河南郑州，注册资本1300万。正乾金融（www..com）是河南正乾金融有限公司倾力打造的互联网金融平台，
-					在线实现资金需求与供给的完美交互。合盘贷为小微企业、三农、个体工商户提供专业的融资服务，为普通大众阶层提供全方位的理财服务。
-				</p>
-				<p style="padding-bottom: 3.125rem;text-indent: 2em;">
-					公司规模500多人，其中风控团队超过100人，有一支50余人的T技术团队。
-					公司已建立了一套成熟的业务操作流程和完善的风险控制体系，为业务的开展提供根本的制度保障；为各系统的运作提供强有力的技术支持。
-					公司高级管理层涵盖了金融、计算机等行业背景，均具有10年以上的专业经验，且具备出众的决策和管理能力。<a href="" style="color: #8B0000;">[了解更多]</a>
-				</p>
-				<img src="img/11.png"/><img src="img/22.png" ><img src="img/33.png" >
+				<div id="four_content">
+					<p id="four_text_one" >
+						河南正乾金融有限公司总部位于河南郑州，注册资本1300万。正乾金融（www..com）是河南正乾金融有限公司倾力打造的互联网金融平台，
+						在线实现资金需求与供给的完美交互。合盘贷为小微企业、三农、个体工商户提供专业的融资服务，为普通大众阶层提供全方位的理财服务。
+					</p>
+					<p id="four_text_two" style="padding-bottom: 3.125rem">
+						公司规模500多人，其中风控团队超过100人，有一支50余人的T技术团队。
+						公司已建立了一套成熟的业务操作流程和完善的风险控制体系，为业务的开展提供根本的制度保障；为各系统的运作提供强有力的技术支持。
+						公司高级管理层涵盖了金融、计算机等行业背景，均具有10年以上的专业经验，且具备出众的决策和管理能力。<a href="" style="color: #8B0000;">[了解更多]</a>
+					</p>
+					<img src="img/11.png" /><img src="img/22.png"><img src="img/33.png">
+				</div>
 			</div>
 		</div>
 		<div id="five" class="back" style="height: 45.625rem;">
-			<div id="content_five" class="content" style="position: relative;">
+			<div id="five_container" class="content">
 				<h2 class="title">
 					常见问题全解答
 				</h2>
 				<div class="line">
 					<div class="left">
+						<div class="rightround"></div>
 					</div>
 					<div class="linetext">
 						Frequently Asked Questions
 					</div>
-				    <div class="right">
+					<div class="right">
+						<div class="leftround"></div>
 					</div>
 				</div>
-				<div class="underline" style="margin-bottom: 3.125rem;">
-					
+				<div class="underline">
 				</div>
-				<div id="" style="margin-bottom: 1.875rem;">
+				<div id="five_adjust">
 				</div>
-				<div style="width: 45rem;margin: 0rem auto;">
-					<div style="margin-bottom: 2rem;position: relative;right: 1.3rem;">
-						<img src="img/new.png" style="vertical-align: middle;">
-						<div style="display: inline-block;font-size: 700;margin-right:36%;margin-left: 1.25rem;">最新问答</div>
-						<img src="img/hot.png" style="vertical-align: middle;">
-						<div style="display: inline-block;font-size: 700;margin-left: 1.25rem;">热门问答</div>
+				<div id="five_content">
+					<div id="five_icon">
+						<img src="img/new.png" >
+						<div id="five_icon_one">最新问答</div>
+						<img src="img/hot.png">
+						<div id="five_icon_two">热门问答</div>
 					</div>
-					<ul style="float: left;line-height: 1.875rem;width:25.8125rem">
-					
-				    <li >
-						<a class="ask" href="" target="_blank" style="">公积金可以申请商业贷款吗?</a>
-						<span class="span1"></span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"></span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
-						<span class="span1"> </span>
-					</li>
-				</ul>
-					<ul style="float: left;line-height: 1.875rem;width: 18.75rem;">
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-					<li>
-						<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
-						<span class="span2"> </span>
-					</li>
-				</ul>
-				<div style="clear: both;"></div>
-				</div>
-				<div style="width: 3.625rem;height: 3.625rem;border-radius: 1.8125rem;background: #8B0000;position: relative;top:2.125rem ;left: 46%;">
-					<div id="more" style="position: absolute;top:1.125rem;left:0.875rem ;color: white;font-weight: 700 ;">
-						更多
+					<div id="five_ul">
+						<ul id="five_leftlist">
+
+							<li>
+								<a class="ask" href="" target="_blank" style="">公积金可以申请商业贷款吗?</a>
+								<span class="five_span1"></span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"></span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业贷款吗？</a>
+								<span class="five_span1"> </span>
+							</li>
+						</ul>
+						<ul id="five_rightlist">
+
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+							<li>
+								<a class="ask" href="" target="_blank">公积金可以申请商业公积金贷款吗？</a>
+								<span class="five_span2"> </span>
+							</li>
+						</ul>
 					</div>
+					<div style="clear: both;"></div>
 				</div>
-			</div>
-		</div>	
-		<div id="bottom" style="height:12.5rem;background-color: #8B0000;border-bottom: 0.0625rem dashed ;color: white;">
-			<div class="content" style="padding-top: 1rem;">
-				
-				
-				<div id="" style="height:8.3125rem;width:63rem;position:relative;top: 17.5%;background:darkred">
-					<div style="margin-bottom: 0.3125rem;">
-						<img src="img/btmphf.png" style="margin-right: 0.15rem;"/>
-					<span>关注正乾金融</span>
-					<img src="img/mail.png" style="margin-left: 0.0625rem;"/><a href="" target="_blank" style="color: white;">在线客服</a>
-					<img src="img/man.png" style="margin-left:22.8rem;"/><span>联系我们</span>
-					</div>
-				
-				<div id="" class="bottom">
-					<div >
-						<img src="img/二维码.png" >
-					</div>
+				<div id="five_more">
+					<!-- <div  style="position: absolute;top:1.125rem;left:0.875rem ;;"> -->
+					更多
+					<!-- </div> -->
 				</div>
-				<div class="bottom" style="width: 11.8rem;display: inline-block;padding-top: 0.1rem;">
-						<input type="text" name="private" id="maill" size="25.5625rem" placeholder="  输入邮箱" style="height:2rem;margin-bottom: 0.155rem;background-color:#bc6868;border:white solid 0.07rem;"/>
-						<input type="text" name="private" id="phone2"size="25.5625rem" placeholder="  输入手机" style="height:2rem;margin-bottom: 0.155rem;background-color:#bc6868;border:white solid 0.07rem;"/>
-						<input type="text" name="private" id="name"  size="25.5625rem" placeholder="  输入姓名" style="height:2rem;background-color:#bc6868;border:white solid 0.07rem;"/>
-				</div>
-				<div class="bottom" style="display: inline-block;">
-						<textarea placeholder=" 输入留言" style="height:6.6rem;width:12.5rem;margin-right: 0.15rem;background-color:#bc6868;border:white solid 0.07rem;resize: none;"/></textarea>
-						<div id="button" style="width:1rem;padding:1.37rem 0.6rem;background-color: white;color:darkred;float: right;line-height: 2rem;"/>
-							提交	
-						</div>
-				</div>
-				<div id="" class="bottom" style="margin:0rem 1.375rem;vertical-align:top;line-height: 1.5rem;font-size: small;">
-						<p>
-							Add:正乾金融
-						</p>
-						<p>
-							Tel:0551-66191717&nbsp;66187722&nbsp;64660285
-						</p>
-						<p>
-							网址:www.qmtc.net&nbsp;&nbsp;Q&nbsp;Q:944255168
-						</p>
-						<p>
-							EML:944255168＠qq.com
-						</p>
-				</div>
-				</div>	
 			</div>
 		</div>
-		<div id="explain" style="background-color: darkred;padding-top:1rem;padding-bottom:0.7rem;">
+		<div id="bottom">
+			<div class="content">
+
+
+				<div id="btm_container">
+					<div id="btm_icon">
+						<img id="btm_icon_one" src="img/btmphf.png" />
+						<span>关注正乾金融</span>
+						<img id="btm_icon_two" src="img/mail.png" /><span>在线留言</span>
+						<img id="btm_icon_three" src="img/man.png"/><span>联系我们</span>
+					</div>
+						<img id="btm_QR" src="img/二维码.png">
+					<div class="bottom" id="btm_text">
+						<input type="text" name="private" id="btm_maill" placeholder="输入邮箱" />
+						<input type="text" name="private" id="btm_phone" placeholder="输入手机"  />
+						<input type="text" name="private" id="btm_name" placeholder="输入姓名"/>
+					</div>
+					<div class="bottom" style="display: inline-block;">
+						<textarea placeholder="输入留言"/></textarea>
+						<div id="btm_button"/>
+						提交
+					</div>
+				</div>
+				<div id="btm_message" class="bottom">
+					<p>
+						Add:正乾金融
+					</p>
+					<p>
+						Tel:0551-66191717&nbsp;66187722&nbsp;64660285
+					</p>
+					<p>
+						网址:www.qmtc.net&nbsp;&nbsp;Q&nbsp;Q:944255168
+					</p>
+					<p>
+						EML:944255168＠qq.com
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="explain" style="background-color: #9C221F;padding-top:1rem;padding-bottom:0.7rem;">
 			<div id="" style="margin: 0rem auto;width: 25rem;">
 				<span style="color:white;font-size: small;">版权所有:&nbsp;北京&nbsp;京CP备13024761号技术支持:&nbsp;中国万网</span>
 				<img src="img/cnzz.png" />
@@ -678,18 +500,18 @@
 				<img src="img/weixin.png">
 			</div>
 		</div>
-		<div id="fixed" style="position: fixed;top:20%;left:90% ;">
+		<div id="fixed" style="position: fixed;top:16.875rem;right: 3.75rem ;">
 			<div class="fixed">
-				<img src="img/关注我们-副本.png"/>
+				<img src="img/关注我们-副本.png" />
 			</div>
 			<div class="fixed">
-				<img src="img/联系我们-副本.png"/>
+				<img src="img/联系我们-副本.png" />
 			</div>
 			<div class="fixed">
-				<img src="img/在线客服-副本.png"/>
+				<img src="img/在线客服-副本.png" />
 			</div>
-		    <div class="fixed">
-				<a href="#one" ><img src="img/返回顶部-副本.png"/></a>
+			<div class="fixed">
+				<a href="#one"><img src="img/返回顶部-副本.png" /></a>
 			</div>
 		</div>
 	</body>

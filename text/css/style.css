@@ -1,0 +1,655 @@
+/* #test::after{
+				content: "";
+				display: inline-block;
+				width:5px;
+				height:5px;
+				border-radius: 50%;
+				background-color:red ;
+				float: right;
+				
+			} */
+/* WebKit browsers */
+::-webkit-input-placeholder {
+	color: #ccc;
+
+}
+
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+	color: #cccccc;
+	opacity: 1;
+}
+
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+	color: #cccccc;
+	opacity: 1;
+	font-size: 0.875rem;
+}
+
+/* Internet Explorer 10+ */
+:-ms-input-placeholder {
+	color: #ccc;
+	font-size: 0.875rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/*清除所有元素自带的margin和padding属性以便调整*/
+.content {
+	width: 62.5rem;
+	margin: 0 auto;
+}
+
+/*margin:0 auto 用于居中一整个块元素*/
+h2 {
+	padding-top: 3.125rem;
+	text-align: center;
+	color: #666;
+}
+
+.underline {
+	width: 6.25rem;
+	height: 0.125rem;
+	margin: 0rem auto;
+	background-color: #8B0000;
+}
+
+#two .underline {
+	margin-bottom: 3.75rem;
+}
+
+#three .underline {
+	margin-bottom: 1.6875rem
+}
+
+/**/
+.linetext {
+	display: inline-block;
+	width: 15rem;
+	text-align: center;
+	position: relative;
+	bottom: 0.625rem;
+	color: gray;
+	font-family: "comic sans ms";
+}
+
+.left {
+	height: 0.0625rem;
+	width: 23.75rem;
+	float: left;
+	background-color: #DEDEDE;
+	position: relative;
+}
+
+.right {
+	height: 0.0625rem;
+	width: 23.75rem;
+	position: relative;
+	float: right;
+	background: #DEDEDE;
+}
+
+.line {
+	padding-top: 2.5rem;
+}
+
+.rightround {
+	width: 0.3125rem;
+	height: 0.3125rem;
+	border-radius: 50%;
+	position: absolute;
+	right: -0.28125rem;
+	bottom: -0.125rem;
+	background: #DEDEDE;
+
+}
+
+.leftround {
+	width: 0.3125rem;
+	height: 0.3125rem;
+	border-radius: 50%;
+	position: absolute;
+	left: -0.28125rem;
+	bottom: -0.125rem;
+	background: #DEDEDE;
+}
+
+
+
+/*top*/
+#topcontent {
+	/* vertical-align:-0.3125rem; */
+	line-height: 1.875rem;
+	height: 1.875rem;
+}
+
+#top {
+	background-color: #9C221F;
+}
+
+#top * {
+	color: white
+}
+
+#top_icon {
+	float: right;
+}
+
+/*将小图标调整对齐*/
+#top_mail {
+	margin-right: 0.3125rem;
+	margin-left: 26.5625rem;
+	/* margin-bottom: 0.08rem; */
+}
+
+#top_phone {
+	margin-right: 0.3125rem;
+	margin-left: 0.3125rem;
+	/* margin-bottom: -0.05rem; */
+	margin-left: 0.625rem;
+	vertical-align: -3px;
+	padding-left: 0.9375rem;
+	border-left: 0.125rem dashed white;
+
+}
+
+#top_weibo,
+#top_weichat {
+	vertical-align: -4px;
+}
+
+#top_span_three {
+	width: 9.375rem;
+}
+
+#top_span_two {
+	margin-left: 0.3125rem;
+}
+
+/*top*/
+
+
+/*one*/
+#one {
+	height: 40rem;
+	background-image: url(../img/bcg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 0.1875rem solid #8B0000;
+}
+
+/*必须设置块高否则背景图片无法显示完整*/
+#one_container {
+	margin-top: 1.875rem;
+}
+
+/*向下调整对齐*/
+#one_logo{
+	width:34.9375rem;height: 4.125rem;
+	margin-top: 8.125rem;background-color: rgb(244,245,246,0.5);
+	position: relative;
+}
+#one_money{
+	display: inline-block;height:4.125;line-height: 4.125rem;vertical-align:top;font-size: 2.5rem;color: #666666;
+}
+/* #one_expert{
+	display: inline-block;font-size: 4.6875rem;position: relative;top: -36px;
+	
+} */
+
+#one_expert{
+	position: absolute;
+	bottom:0px;
+	font-size: 4.6875rem;
+	background:linear-gradient(	#D2691E,#F5DEB3,darkred);
+	-webkit-background-clip:text;
+	color:transparent;
+	z-index: 3;
+	
+}
+#one_shadow{
+	position:absolute;
+	left: 361px;
+	bottom:-1px;
+	font-size: 4.6875rem;
+	
+}
+#one_container li {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	transition: all 0.3s;
+	color: #999;
+}
+
+#one_container li a {
+	color: #707070;
+}
+
+/*display li ul父子元素配合 转化为表格模式使其可以横向显示并均匀分配空间*/
+#one_container ul {
+	width: 37.5rem;
+	float: right;
+	margin-right: -0.47rem;
+	height: 4.1875rem;
+	display: table;
+	list-style: none;
+	font-size: smaller;
+	font-weight: 800;
+}
+
+#one_container li:hover {
+	border-bottom: 0.2rem solid #9C221F;
+	color: #9C221F;
+	/* position: relative;
+				top: 0.1rem; */
+	已无用
+}
+
+#one_btm:hover {
+	cursor: pointer;
+	height: 99%;
+}
+
+/*one*/
+
+
+/*two*/
+#two {
+	height: 34.375rem;
+	background-color: #F5F4F9;
+}
+
+#two .title {
+	text-align: center;
+}
+
+#two .text {
+	display: inline-block;
+	width: 19.8rem;
+	height: 8.75rem;
+	margin: 0rem 1.25rem 1.25rem 0rem;
+	position: relative;
+	background-color: azure;
+	transition: all 0.6s;
+}
+
+#two .text:nth-child(3n) {
+	margin-right: 0rem;
+}
+
+.text img {
+	position: absolute;
+	top: 37%;
+	left: 5%;
+}
+
+.two_content {
+	height: 100%;
+	width: 12.5rem;
+	float: right;
+}
+
+/*这个百分比不用变它随着父元素大小变化而变化*/
+#two .p1 {
+	font-size: 1.25rem;
+	padding-top: 1.25rem;
+}
+
+#two .p2 {
+	font-size: 0.8125rem;
+	color: gray;
+}
+
+#two .p2:hover {
+	background: #8B0000;
+	color: white;
+	transition: all 0.6s;
+}
+
+#two .p3 {
+	height: 0.125rem;
+	width: 35%;
+	margin-top: 0.3125rem;
+	margin-bottom: 0.3125rem;
+	background: #808080;
+}
+
+#two .p4 {
+	font-size: 0.8125rem;
+	color: gray;
+}
+
+#two .text:hover {
+	background: #8B0000;
+	color: white;
+}
+
+/*three*/
+#three_container {
+	height: 31.4375rem;
+}
+
+.three_content {
+	display: inline-block;
+	position: relative;
+	width: 19%;
+
+}
+
+#three .round {
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	border-radius: 50%;
+	margin: 0rem 1.875rem;
+	border: 0.4rem solid #8B0000;
+	font-weight: 700;
+	color: #9C221F;
+	transition: all 0.3s;
+}
+
+/*必须使用相对定位和绝对定位否则会下沉*/
+
+#three .round_one {
+	text-align: center;
+	margin: 3.4375rem 2.5rem;
+	width: 5rem;
+	height: 5rem;
+	font-size: 1.25rem;
+}
+
+#three .round_two {
+	width: 10rem;
+	font-size: 0.9375rem;
+	text-align: center;
+	color: black;
+}
+
+#three .round_three {
+	font-size: 0.75rem;
+	margin: 0.625rem 1.625rem;
+	width: 6.875rem;
+	text-align: center;
+	color: #808080;
+}
+
+#three .round:hover {
+	background: #8B0000;
+	color: white;
+	transition: all 0.3s;
+}
+
+/*three*/
+/*four*/
+#four_content {
+	width: 55rem;
+	margin: 0 auto;
+}
+
+#four img {
+	padding-bottom: 3.125rem;
+}
+
+#four p {
+	color: #BEBDBF;
+	;
+	text-indent: 2em;
+}
+
+#four_title {
+	color: #8B0000;
+	text-align: center;
+	font-size: 900;
+}
+
+#four_text_one {
+	padding-top: 3.125rem;
+}
+
+#four_text_two {
+	padding-bottom: 3.125rem;
+}
+
+/*five*/
+#five_container {
+	position: relative;
+}
+
+#five .underline {
+	margin-bottom: 3.125rem;
+}
+
+#five_adjust {
+	margin-bottom: 3.25rem;
+}
+
+#five_content {
+	width: 52.4375rem;
+	margin: 0rem auto;
+}
+
+#five .ask {
+	font-size: 0.85rem;
+	width: 11.25rem;
+}
+
+#five_icon {
+	margin-bottom: 2rem;
+	position: relative;
+	right: 1.3rem;
+}
+
+#five_icon img {
+	vertical-align: middle;
+}
+
+#five_icon_one {
+	display: inline-block;
+	font-size: 700;
+	margin-left: 1.25rem;
+	margin-right: 22.5rem;
+}
+
+#five_icon_two {
+	display: inline-block;
+	font-size: 700;
+	margin-left: 1.25rem;
+}
+
+#five li {
+	position: relative;
+}
+
+.five_span1 {
+	position: absolute;
+	right: 6.875rem;
+	font-size: small;
+}
+
+.five_span2 {
+	position: absolute;
+	right: -3rem;
+	font-size: small;
+}
+
+#five_ul {
+	width: 55rem;
+	margin: 0 auto;
+}
+
+#five_leftlist {
+	float: left;
+	line-height: 1.875rem;
+	width: 25.8125rem;
+	margin-right: 6.125rem;
+}
+
+#five_rightlist {
+	float: left;
+	line-height: 1.875rem;
+	width: 18.75rem;
+}
+
+#five_more {
+	background-color: #8B0000;
+	color: white;
+	width: 3.625rem;
+	height: 3.625rem;
+	border-radius: 1.8125rem;
+	position: relative;
+	top: 2.125rem;
+	/* left: 29.25rem; */
+	margin: 0 auto;
+	line-height: 3.625rem;
+	text-align: center;
+	font-weight: 700;
+	transition: all 0.6s;
+}
+
+#five_more:hover {
+	width: 8rem;
+	color: #9C221F;
+	background-color: white;
+	border: 0.05rem solid #9C221F;
+}
+
+/*bottom*/
+#bottom {
+	background-color: #9C221F;
+	border-bottom: 0.0625rem dashed darkred;
+	color: white;
+}
+
+#bottom .content {
+	padding-top: 2.8125rem;
+	padding-bottom: 2.05rem;
+	width: 60.9375rem;
+	margin: 0 auto
+}
+
+.bottom {
+	display: inline-block;
+}
+
+#btm_container {
+	height: 8.3125rem;
+	width: 63rem;
+	position: relative;
+	top: 17.5%;
+	background: #9C221F
+}
+
+#btm_name,
+#btm_maill,
+#btm_phone {
+	height: 1.875rem;
+	float: left;
+	width: 10.5rem;
+	height: 2.133rem;
+	text-indent: 1em;
+	background-color: #BA6563;
+}
+
+#btm_text {
+	width: 11.8rem;
+	display: inline-block;
+	padding-top: 0.1rem;
+}
+
+#bottom textarea {
+	height: 6.725rem;
+	width: 18.75rem;
+	box-sizing: border-box;
+	padding-top: 0.625rem;
+	margin-right: 0.15rem;
+	text-indent: 1em;
+	background-color: #BA6563;
+	resize: none;
+
+}
+
+#btm_maill,
+#btm_phone {
+	text-indent: 1em;
+	margin-bottom: 0.155rem;
+}
+
+#btm_icon {
+	margin-bottom: 0.3125rem;
+}
+
+#btm_icon_one {
+	margin-right: 0.15rem;
+}
+
+#btm_icon_two {
+	margin-left: 0.6rem
+}
+
+#btm_icon_three {
+	margin-left: 29.875rem;
+}
+
+#btm_QR {
+	margin-right: 2.25rem;
+}
+
+#bottom img {
+	margin-right: 0.5rem;
+}
+
+#bottom span {
+	font-size: 0.875rem;
+}
+
+#button:hover {
+	cursor: pointer;
+}
+
+#bottom input[type="text"],
+#bottom textarea {
+	border: none;
+	color: white;
+}
+
+#bottom input[type="text"] {
+	font-size: 0.8125rem;
+}
+#btm_button{
+	width: 1rem;
+	height: 3.96875rem;
+	padding:2rem 0.6rem 0.75rem 0.6rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	background-color: white;
+	color: #9C221F;
+	float: right;
+	line-height: 1.25rem;
+	text-align: center;
+}
+#btm_message{
+	margin:0rem 1.6rem;vertical-align:top;line-height: 1.5rem;font-size: small;
+}
+/*fixed*/
+.fixed {
+	margin-top: 0.09375rem;
+	width: 3.125rem;
+	height: 3.4375rem;
+	background: #9C221F;
+	text-align: center;
+}
+
+#fixed img {
+	margin-top: 0.8125rem
+}
