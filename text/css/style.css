@@ -9,29 +9,29 @@
 				
 			} */
 /* WebKit browsers */
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
 	color: #ccc;
 
-}
+} */
 
 /* Mozilla Firefox 4 to 18 */
-:-moz-placeholder {
+/* :-moz-placeholder {
 	color: #cccccc;
 	opacity: 1;
-}
+} */
 
 /* Mozilla Firefox 19+ */
-::-moz-placeholder {
+/* ::-moz-placeholder {
 	color: #cccccc;
 	opacity: 1;
 	font-size: 0.875rem;
-}
+} */
 
-/* Internet Explorer 10+ */
+/* Internet Explorer 10+
 :-ms-input-placeholder {
 	color: #ccc;
 	font-size: 0.875rem;
-}
+} */
 
 * {
 	margin: 0;
@@ -194,36 +194,51 @@ h2 {
 }
 
 /*向下调整对齐*/
-#one_logo{
-	width:34.9375rem;height: 4.125rem;
-	margin-top: 8.125rem;background-color: rgb(244,245,246,0.5);
+#one_logo {
+	width: 34.9375rem;
+	height: 4.125rem;
+	margin-top: 8.125rem;
+	background-color: rgb(244, 245, 246, 0.5);
 	position: relative;
 }
-#one_money{
-	display: inline-block;height:4.125;line-height: 4.125rem;vertical-align:top;font-size: 2.5rem;color: #666666;
+
+#one_money {
+	display: inline-block;
+	height: 4.125;
+	line-height: 4.125rem;
+	vertical-align: top;
+	font-size: 2.5rem;
+	color: #666666;
 }
+
 /* #one_expert{
 	display: inline-block;font-size: 4.6875rem;position: relative;top: -36px;
 	
 } */
 
-#one_expert{
+#one_expert {
 	position: absolute;
-	bottom:0px;
+	bottom: 0px;
 	font-size: 4.6875rem;
-	background:linear-gradient(	#D2691E,#F5DEB3,darkred);
-	-webkit-background-clip:text;
-	color:transparent;
+	font-weight: 600;
+	background: linear-gradient(#D2691E, #F5DEB3, darkred);
+	background:transparent\0;
+	-webkit-background-clip: text;
+	color: transparent;
+	color:#8B0000\0;
 	z-index: 3;
-	
+
 }
-#one_shadow{
-	position:absolute;
-	left: 361px;
-	bottom:-1px;
+
+#one_shadow {
+	
+	position: absolute;
+	left: 362px;
+	bottom: -0.15625rem;
 	font-size: 4.6875rem;
-	
+font-weight: 600;
 }
+
 #one_container li {
 	display: table-cell;
 	text-align: center;
@@ -232,12 +247,12 @@ h2 {
 	color: #999;
 }
 
-#one_container li a {
+#one_nav li a {
 	color: #707070;
 }
 
 /*display li ul父子元素配合 转化为表格模式使其可以横向显示并均匀分配空间*/
-#one_container ul {
+#one_nav {
 	width: 37.5rem;
 	float: right;
 	margin-right: -0.47rem;
@@ -248,114 +263,164 @@ h2 {
 	font-weight: 800;
 }
 
-#one_container li:hover {
+#one_nav li:hover {
 	border-bottom: 0.2rem solid #9C221F;
 	color: #9C221F;
 	/* position: relative;
 				top: 0.1rem; */
-	已无用
+}
+
+#one_btm {
+	margin-top: 2rem;
+	margin-bottom: 115px;
+	width: 10rem;
+	height: 3.75rem;
+	border: none;
+	background: #C0312E;
+	box-shadow: 0.09rem 0.09rem 0.1875rem gray;
+	font-size: larger;
+	color: white;
+	border-radius: 0.625rem 0.625rem;
 }
 
 #one_btm:hover {
 	cursor: pointer;
-	height: 99%;
+}
+
+#one_scroll {
+	width: 3.75rem;
+}
+
+.scroll {
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 0.625rem;
+	background-color: #9CA2AA;
 }
 
 /*one*/
 
 
 /*two*/
-#two {
-	height: 34.375rem;
-	background-color: #F5F4F9;
+#two{
+	background-color:whitesmoke;
 }
-
-#two .title {
-	text-align: center;
+.two_content{
+	width: 100%;
+	display: flex;
 }
-
-#two .text {
-	display: inline-block;
-	width: 19.8rem;
+.two_text{
+	flex: 1;
+	display: flex;
 	height: 8.75rem;
-	margin: 0rem 1.25rem 1.25rem 0rem;
-	position: relative;
-	background-color: azure;
-	transition: all 0.6s;
+	margin:0 1.25rem 1.25rem 0;
+	background-color:aliceblue;
+	
 }
-
-#two .text:nth-child(3n) {
-	margin-right: 0rem;
+.two_text:nth-child(3n){
+	margin-right: 0px;
 }
-
-.text img {
-	position: absolute;
-	top: 37%;
-	left: 5%;
-}
-
-.two_content {
-	height: 100%;
-	width: 12.5rem;
-	float: right;
-}
-
-/*这个百分比不用变它随着父元素大小变化而变化*/
-#two .p1 {
-	font-size: 1.25rem;
-	padding-top: 1.25rem;
-}
-
-#two .p2 {
-	font-size: 0.8125rem;
-	color: gray;
-}
-
-#two .p2:hover {
-	background: #8B0000;
+.two_text:hover{
+	background-color:#8B0000 ;
 	color: white;
-	transition: all 0.6s;
+	transition:all 0.6s; 
 }
-
-#two .p3 {
+.two_text:hover .two_char div:nth-child(3){
+	visibility: visible;
+	transition:all 0.6s; 
+}
+.two_img{
+	display: flex;
+	flex: 5;
+	align-items: center;
+	justify-content: center;
+}
+.two_char{
+	flex: 11;
+}
+.two_char div:first-child{
+	font-size: 1.125rem;
+	margin-top: 1.5625rem;
+}
+.two_char div:nth-child(2){
+	font-size: 0.75rem;
+}
+.two_char div:nth-child(3){
+	background-color:white;
+	width: 3.75rem;
 	height: 0.125rem;
-	width: 35%;
-	margin-top: 0.3125rem;
-	margin-bottom: 0.3125rem;
-	background: #808080;
+	margin: 0.5rem 0rem;
+	visibility: hidden;
 }
-
-#two .p4 {
-	font-size: 0.8125rem;
-	color: gray;
+.two_char div:last-child{
+	font-size: 0.75rem;
 }
-
-#two .text:hover {
-	background: #8B0000;
-	color: white;
-}
-
 /*three*/
 #three_container {
 	height: 31.4375rem;
+	position: relative;
+	perspective: 2000px;
+	-ms-perspective:2000px;;
 }
-
+#three_translate{
+	width: 100%;
+	transform-style: preserve-3d;
+	/* transition: all 15s linear; */
+	animation:rolate 20s linear 0s infinite ;
+	animation-play-state: paused\0;
+	
+}
+@keyframes rolate{
+	from{transform:rotateY(0);}
+	to{transform: rotateY(360deg);}
+}
+#three_translate:hover{
+	animation-play-state: paused;
+}
 .three_content {
 	display: inline-block;
-	position: relative;
+	position:absolute;
+	position: static\0;
+	left: 38.5%;
+	top: 0rem;
 	width: 19%;
+}
+.three_content:nth-child(1){
+	transform: rotateY(0deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
 
+.three_content:nth-child(2){
+	transform: rotateY(72deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(3){
+	transform: rotateY(144deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(4){
+	transform: rotateY(216deg) translateZ(400px); 
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(5){
+	transform: rotateY(288deg) translateZ(400px); 
+	transform:rotateY(0deg) translateZ(0px)\0;
 }
 
 #three .round {
 	width: 10rem;
 	height: 10rem;
-	position: absolute;
 	border-radius: 50%;
 	margin: 0rem 1.875rem;
 	border: 0.4rem solid #8B0000;
 	font-weight: 700;
-	color: #9C221F;
+	color:white;
+	background-color: #8B0000;
 	transition: all 0.3s;
 }
 
@@ -385,11 +450,10 @@ h2 {
 }
 
 #three .round:hover {
-	background: #8B0000;
-	color: white;
+	background:white;
+	color:#8B0000;
 	transition: all 0.3s;
 }
-
 /*three*/
 /*four*/
 #four_content {
@@ -500,7 +564,9 @@ h2 {
 	line-height: 1.875rem;
 	width: 18.75rem;
 }
-
+#five li:hover{
+ text-decoration: underline;
+}
 #five_more {
 	background-color: #8B0000;
 	color: white;
@@ -518,6 +584,7 @@ h2 {
 }
 
 #five_more:hover {
+	box-shadow: 0.125rem 0.125rem 1rem gray;
 	width: 8rem;
 	color: #9C221F;
 	background-color: white;
@@ -544,7 +611,7 @@ h2 {
 
 #btm_container {
 	height: 8.3125rem;
-	width: 63rem;
+	width: 60rem;
 	position: relative;
 	top: 17.5%;
 	background: #9C221F
@@ -564,11 +631,10 @@ h2 {
 #btm_text {
 	width: 11.8rem;
 	display: inline-block;
-	padding-top: 0.1rem;
 }
 
 #bottom textarea {
-	height: 6.725rem;
+	height: 6.8rem;
 	width: 18.75rem;
 	box-sizing: border-box;
 	padding-top: 0.625rem;
@@ -619,17 +685,20 @@ h2 {
 
 #bottom input[type="text"],
 #bottom textarea {
-	border: none;
+	border:1px solid white;
 	color: white;
 }
 
 #bottom input[type="text"] {
 	font-size: 0.8125rem;
+	
+	
 }
-#btm_button{
+
+#btm_button {
 	width: 1rem;
-	height: 3.96875rem;
-	padding:2rem 0.6rem 0.75rem 0.6rem;
+	height: 4.03rem;
+	padding: 2rem 0.6rem 0.78rem 0.6rem;
 	font-size: 0.75rem;
 	font-weight: 600;
 	background-color: white;
@@ -638,9 +707,17 @@ h2 {
 	line-height: 1.25rem;
 	text-align: center;
 }
-#btm_message{
-	margin:0rem 1.6rem;vertical-align:top;line-height: 1.5rem;font-size: small;
+#btm_button:hover{
+	cursor: pointer;
 }
+
+#btm_message {
+	margin: 0rem 1.6rem;
+	vertical-align: top;
+	line-height: 1.5rem;
+	font-size: small;
+}
+
 /*fixed*/
 .fixed {
 	margin-top: 0.09375rem;

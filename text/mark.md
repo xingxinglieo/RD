@@ -233,3 +233,129 @@ box-shadow:0.09rem 0.09rem 0.1875rem gray;
 
 ![](/shadow.png)
 
+4.4增加了一个选择图的特效
+
+![](/rolate.png)
+
+会一直旋转 鼠标放在上面停下
+
+```
+#three_container {
+	height: 31.4375rem;
+	position: relative;
+	perspective: 2000px;
+	-ms-perspective:2000px;;
+}
+#three_translate{
+	width: 100%;
+	transform-style: preserve-3d;
+	/* transition: all 15s linear; */
+	animation:rolate 20s linear 0s infinite ;
+	animation-play-state: paused\0;
+	
+}
+@keyframes rolate{
+	from{transform:rotateY(0);}
+	to{transform: rotateY(360deg);}
+}
+#three_translate:hover{
+	animation-play-state: paused;
+}
+.three_content {
+	display: inline-block;
+	position:absolute;
+	position: static\0;
+	left: 38.5%;
+	top: 0rem;
+	width: 19%;
+}
+.three_content:nth-child(1){
+	transform: rotateY(0deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(2){
+	transform: rotateY(72deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(3){
+	transform: rotateY(144deg) translateZ(400px);
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(4){
+	transform: rotateY(216deg) translateZ(400px); 
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+.three_content:nth-child(5){
+	transform: rotateY(288deg) translateZ(400px); 
+	transform:rotateY(0deg) translateZ(0px)\0;
+}
+
+#three .round {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	margin: 0rem 1.875rem;
+	border: 0.4rem solid #8B0000;
+	font-weight: 700;
+	color:white;
+	background-color: #8B0000;
+	transition: all 0.3s;
+}
+```
+
+如上代码
+
+首先六个圆圈使用子绝父相定位在同一个点上 重合在一起
+
+接着为各个圆设置旋转的角度
+
+trasform：rotateY（xxx deg）
+
+每个递增360/5deg
+
+接着设置translateZ这个属性的设置紧跟着rotate 而不是单独出来（它就是transform的属性
+
+作用如下图
+
+![](/radius.png)
+
+屏幕到屏幕内部轴距离是一个半径（z的属性值） 也是每个圆到内部轴半径
+
+父盒子设置
+
+```
+transform-style: preserve-3d;
+```
+
+模拟3d效果
+
+ 之后还要设置给圆的父盒子的父盒子（因为圆的父盒子才是旋转的整体 给它的父盒子再设置透视距离才是看整体的距离）设置perspective 单位px
+
+值越小 图越大 效果约明显 模拟透视
+
+最后是引入动画
+
+```
+animation:rolate 20s linear 0s infinite ;
+	animation-play-state: paused\0;
+	
+}
+@keyframes rolate{
+	from{transform:rotateY(0);}
+	to{transform: rotateY(360deg);}
+```
+
+先在父盒子上加入animation:动画名（自己定义） 完成时间 完成的速度曲线 延迟开始的时间 循环动画的次数；
+
+在下面使用@ketframs 动画名（刚刚定义的）引入动画 从0度旋转到360度就是转一圈加上无限循环动画就是无限转 之后 设置hover每个圆时 触发动画停止属性 
+
+hover{animation-play-state（动画运行的状态）: paused}
+
+就可以鼠标停在哪个圆就停在哪个圆上面
+
+ie不兼容transform-style: preserve-3d和渐变体; 只能使用每个ie语句单独设置\0给ie（hack方法，ie可以识别类似color：red\0；的语句但是其他浏览器不可以）
+
