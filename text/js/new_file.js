@@ -1,8 +1,20 @@
 window.onload = function() {
 					var content = document.querySelectorAll(".two_text");
 					var img = document.querySelectorAll(".two_img img")
+// 					for(var j=0;j<img.length;j++){
+// 						var w = j+1;
+// 						content[j].onmouseover = function(){
+// 							console.log(img[j].src);
+// 							img[j].src = "img/"+w+".2.png";
+// 							console.log(img[j].src);
+// 						}
+// 						content[j].onmouseleave = function(){
+// 							img[j].src = "img/"+w+".1.png";
+// 						}
+// 					}
 					content[0].onmouseover = function() {
-						img[0].src = "img/1.2.png"
+						img[0].src = "img/1.2.png";
+						// console.log(img[0].src);
 					}
 					content[0].onmouseleave = function() {
 						img[0].src = "img/1.1.png"
@@ -37,6 +49,7 @@ window.onload = function() {
 					content[5].onmouseleave = function() {
 						img[5].src = "img/6.1.png"
 					}
+					
 					var d = new Date();
 					var g = document.querySelectorAll(".five_span1")
 					var f = document.querySelectorAll(".five_span2")
